@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>新浪头条</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      .box {
+        width: 248px;
+        height: 163px;
+        border: 1px solid red;
+        margin: 100px auto;
+      }
+
+      .box h3 {
+        height: 32px;
+        border-bottom: 1px dotted #ccc;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 32px;
+        padding-left: 15px;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      .box ul li a {
+        font-size: 12px;
+        color: #666;
+        /* text-decoration: none; */
+      }
+
+      .box ul li {
+        height: 20px;
+        padding-left: 15px;
+        line-height: 20px;
+      }
+
+      .box ul {
+        margin-top: 7px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <h3>
+        this is a box
+      </h3>
+      <ul>
+        <li><a href="#">hhhhhhh</a></li>
+        <li><a href="#">hhhhhhh</a></li>
+        <li><a href="#">hhhhhhh</a></li>
+        <li><a href="#">hhhhhhh</a></li>
+        <li><a href="#">hhhhhhh</a></li>
+      </ul>
+    </div>
+
+    <img
+      src="https://gitee.com/haikupeng/myblog/raw/master/img/20200331221227.JPG#vwid=620&vhei=575#vwid=620&vhei=575"
+      text-align="middle"
+      ;width="100"
+      height="100"
+    />
+    <p>[TOC]</p>
+
+    <hr />
+
+    <h3>
+      印象笔记：<a
+        href="https://list.yinxiang.com/markdown/eef42447-db3f-48ee-827b-1bb34c03eb83.php"
+        >markdown</a
+      >
+      学习强化
+    </h3>
+
+    <ol>
+      <li>新建一个Markdown 笔记：Ctrl+Alt+D（以down结尾）</li>
+      <li>插入现在的日期和时间：Alt+Shift+D（Date，注意是Alt）</li>
+      <li>删除线：除了Bold、underline、italic还有textline：Ctrl+T</li>
+      <li>
+        分割线：先记住要全局控制使用Ctrl+Shift+<strong>-</strong>（这里有一个 -
+        ）
+      </li>
+      <li>插入编号列表：Ctrl+Shift+O（牢记Oder是有序的意思）</li>
+      <li>项目符号列表：用的少，与一般应用于清单列表中，Ctrl+shift+W方框</li>
+      <li>插入代码块：重要的放在最后面，Ctrl+Shift+L</li>
+    </ol>
+
+    <h4>参考书目</h4>
+
+    <p>
+      <img
+        alt="0377d6242ecaacead7720c877f3b7042.png"
+        src="en-resource://database/5518:0"
+      />
+    </p>
+
+    <h3>VScode搭建C/C++运行环境</h3>
+
+    <p>
+      这里我们使用windows命令行工具，Cygwin和MinGW都包含编译器GUN
+      C++，他们要使用的编译器名为g++
+    </p>
+
+    <h4>准备工作</h4>
+
+    <ol>
+      <li>安装好vscode</li>
+      <li>
+        安装好C/C++相关拓展程序（如code runer<a
+          href="
+https://blog.csdn.net/qq_31359295/article/details/75113078"
+          >一些配置</a
+        >）
+      </li>
+      <li>
+        安装好GCC/Clang并配置好环境（<a
+          href="https://app.yinxiang.com/fx/e45cd8c1-fba7-4443-a396-4ac042f6ffda"
+          >教程</a
+        >）
+        &lt;u&gt;关键步骤：复制MINGW的目录，此电脑&gt;属性&gt;高级系统设置&gt;环境变量&gt;path&gt;添加刚刚复制的目录&lt;/u&gt;
+        验证方式：cmd&gt;g++ -v
+      </li>
+      <li>
+        配置好默认生成任务：Tasks:Configure Default Build
+        Task，注意环境变量中要设置每种语言的执行路径
+      </li>
+    </ol>
+
+    <h4>补充知识，充个电</h4>
+
+    <ol>
+      <li>
+        编译器是把源代码变成可执行文件的，编辑器是你打字的软件。记事本就是一个编辑器，VSC也是编辑器。编辑器是无法编译运行程序的，因为那是编译器的工作
+      </li>
+      <li>
+        MinGW是gcc在Windows下的移植，gcc是世界上最流行的C/C++编译器组合。但gcc这个名字也指编译C语言的那个程序，g++才是C++编译器。即gcc程序和g++程序包含在gcc套件以及MinGW里，当只说gcc时要根据语境自己区分
+      </li>
+      <li>
+        其实MinGW和MinGW-w64只是名字像，它们是两个不同的项目。为了方便，本文中的MinGW指的其实都是MinGW-w64。&lt;del&gt;MinGW本身已经很久没有更新了，不使用它&lt;/del&gt;哎呀，原来MinGW是活着的，但它只能产生32位程序
+      </li>
+      <li>
+        扩展是extension，插件是plugin，VSC用的是前者这种称呼。大部分文章都是混用两者的，不严谨但是能理解就行，要学会抓主要矛盾。当然本文用的都是正确的
+      </li>
+    </ol>
+
+    <h4>
+      方案1：采用vscode+code runer插件+GCC→<a
+        href="https://zhuanlan.zhihu.com/p/35178331"
+        >参考文章</a
+      >
+    </h4>
+
+    <h4>
+      方案2：配置一些json文件，详情见<a
+        href="https://app.yinxiang.com/fx/a607569f-26eb-4e79-a427-f407738fa960"
+        >笔记</a
+      >
+    </h4>
+
+    <p>
+      你需要注意的：创建一个你打算存放代码的文件夹，称作工作区文件夹；路径不能含有中文和引号，最好不要有空格
+    </p>
+
+    <h4>方案3：直接利用命令行工具，</h4>
+
+    <p>
+      需要提前利用其他工具写好cpp文件然后→cmd&gt;cd 源代码文件目录&gt;g++ -o
+      源代码文件名&gt;按下enter执行 可执行文件
+    </p>
+
+    <hr />
+
+    <h3>菜单项</h3>
+
+    <p>
+      我们创建好一个项目，需要对程序进行编译和链接，IDE（integerated development
+      environment）通常提供了多个菜单项，比如Compile（编译），Build（建立），Make（生成），Link（链接），Execute（执行），Run（运行）和Debug（调试）
+    </p>
+
+    <ol>
+      <li>compile：当前在修改哪一个文件，就会编译哪一个文件，生产.obj文件</li>
+      <li>
+        Build通常意味着<strong>编译</strong>项目中<strong>所有</strong>源代码文件的代码。Build=compile+link，生成可执行.exe
+        文件
+      </li>
+      <li>Make和build类似，将修改过的文件编译后和所有文件链接</li>
+      <li>
+        Link：将编译后所有的源代码与所需的库代码（比如一些头文件？）组合起来
+      </li>
+      <li>Debug：以步进方式执行程序</li>
+      <li>
+        <p>
+          进一步学习<a
+            href="https://mp.weixin.qq.com/s?__biz=MzA3MDUyODY0OA==&amp;mid=505408239&amp;idx=1&amp;sn=cfd63c8e7d3f3aea76f5e49f77f7b53b&amp;scene=19#wechat_redirect"
+            >参考文章</a
+          >
+          C++的编译和执行过程：
+        </p>
+      </li>
+      <li>
+        <p>
+          编译（预处理&gt;编译&gt;目标文件）目标代码时编译器输出的结果，常见的拓展名为&quot;.o&quot;或“.obj”
+        </p>
+      </li>
+      <li>链接：将目标代码和C++函数库相连接，并将源程序所用的库代码与</li>
+      <li>执行：在特定的机器环境下运行C++程序</li>
+    </ol>
+
+    <p>
+      写下第一个程序时，应该在结尾添加一个 cin.get( ); return
+      0;这样窗口就不会立马关闭，如果不够，那就来俩；
+      <a href="https://zhuanlan.zhihu.com/p/36667908">IDEA断点调试快捷键</a
+      >---知乎
+    </p>
+
+    <h3>写Helloworld的一百种方式</h3>
+
+    <p>endl：换行+fflush（stdin）清空缓存 \n 只是单纯的换行</p>
+  </body>
+</html>
